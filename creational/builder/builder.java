@@ -79,7 +79,7 @@ class Car {
     }
 }
 
-class main {
+class Main {
 
     public static void main(String[] args) {
         Car car = new Car.Builder()
