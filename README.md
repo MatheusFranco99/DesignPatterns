@@ -1,2 +1,2 @@
-# DesignPatterns
-Design pattern notes and implementation
+# Design Patterns
+Personal repository for design pattern notes and example implementations.
