@@ -1,4 +1,4 @@
-package creational.simple_factory;
+package simple_factory;
 
 public class simple_factory {
     public static void main(String[] args) {

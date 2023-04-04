@@ -1,17 +1,6 @@
-package creational.lazy_initialization;
+package lazy_initialization;
 
-class ExpensiveObject {
-    public ExpensiveObject() {
-        try {
-            Thread.sleep(1000); // simulate a long and expensive initialization process
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println("Expensive object created!");
-    }
-}
-
-class LazyInitilizationExample {
+public class LazyInitilization {
     private ExpensiveObject expensiveObject;
 
     public ExpensiveObject getExpensiveObject() {
@@ -22,7 +11,7 @@ class LazyInitilizationExample {
     }
 
     public static void main(String[] args) {
-        LazyInitilizationExample example = new LazyInitilizationExample();
+        LazyInitilization example = new LazyInitilization();
         System.out.println("Creating expensive object");
         long startTime = System.currentTimeMillis();
         ExpensiveObject object1 = example.getExpensiveObject();
@@ -38,5 +27,16 @@ class LazyInitilizationExample {
         System.out.println("Checking if object1 and object2 are the same...");
         System.out.println("object1 == object2: " + (object1 == object2));
 
+    }
+}
+
+class ExpensiveObject {
+    public ExpensiveObject() {
+        try {
+            Thread.sleep(1000); // simulate a long and expensive initialization process
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Expensive object created!");
     }
 }

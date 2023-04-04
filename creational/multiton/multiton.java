@@ -1,4 +1,4 @@
-package creational.multiton;
+package multiton;
 
 import java.util.HashMap;
 import java.util.Map;

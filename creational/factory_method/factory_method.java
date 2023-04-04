@@ -1,5 +1,13 @@
-package creational.factory_method;
+package factory_method;
 
+public class factory_method {
+    public static void main(String[] args) {
+        CharacterFactory factory = new WarriorFactory();
+        Character character = factory.createCharacter();
+        character.move(); // Output: Warrior is moving.
+        character.attack(); // Output: Warrior is attacking with a sword.
+    }
+}
 
 abstract class Character {
     public abstract void move();
@@ -42,13 +50,4 @@ class MageFactory extends CharacterFactory {
     }
 }
 
-
-public class factory_method {
-    public static void main(String[] args) {
-        CharacterFactory factory = new WarriorFactory();
-        Character character = factory.createCharacter();
-        character.move(); // Output: Warrior is moving.
-        character.attack(); // Output: Warrior is attacking with a sword.
-    }
-}
 
